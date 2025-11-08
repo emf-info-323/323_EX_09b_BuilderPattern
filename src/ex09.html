@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercice 9 – Builder Pattern (PC)</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 2em;
+            }
+            label {
+                display: inline-block;
+                min-width: 220px;
+                margin: 0.25em 0;
+            }
+            select,
+            input,
+            button {
+                margin: 0.2em 0;
+                padding: 0.45em 0.5em;
+                font-size: 1em;
+            }
+            fieldset {
+                border: 1px solid #ccc;
+                padding: 1em;
+                border-radius: 8px;
+                max-width: 580px;
+            }
+            legend {
+                font-weight: 600;
+            }
+            #output {
+                margin-top: 1em;
+                padding: 1em;
+                border: 1px solid #ccc;
+                min-height: 2em;
+                background: #fafafa;
+                font-family: Consolas, 'Courier New', monospace;
+                color: #064e3b;
+            }
+        </style>
+        <script src="ex09.js" defer></script>
+    </head>
+    <body>
+        <h1>Comprendre le builder pattern (PC)</h1>
+
+        <fieldset>
+            <legend>Configurer un PC</legend>
+
+            <!-- CPU -->
+            <label for="idCpu">CPU :</label>
+            <select id="idCpu" required>
+                <option value="">-- choisissez un CPU --</option>
+                <option value="Intel i5">Intel i5</option>
+                <option value="Intel i7">Intel i7</option>
+                <option value="Ryzen 5">Ryzen 5</option>
+                <option value="Ryzen 7">Ryzen 7</option></select
+            ><br />
+
+            <!-- RAM -->
+            <label for="idRam">RAM (Go) :</label>
+            <input id="idRam" type="number" min="8" step="8" value="16" /><br />
+
+            <!-- SSD -->
+            <label for="idSsd">SSD (Go) :</label>
+            <input id="idSsd" type="number" min="0" step="128" value="512" /><br />
+
+            <!-- HDD -->
+            <label for="idHdd">HDD (Go) :</label>
+            <input id="idHdd" type="number" min="0" step="500" value="0" /><br />
+
+            <!-- GPU -->
+            <label for="idGpu">Carte graphique :</label>
+            <select id="idGpu">
+                <option value="Intégrée">Intégrée</option>
+                <option value="NVIDIA RTX 4060">NVIDIA RTX 4060</option>
+                <option value="NVIDIA RTX 4070">NVIDIA RTX 4070</option>
+                <option value="AMD RX 7600">AMD RX 7600</option></select
+            ><br />
+
+            <!-- Moniteurs -->
+            <label for="idScreens">Nombre d’écrans :</label>
+            <input id="idScreens" type="number" min="1" max="4" value="1" /><br />
+
+            <!-- OS -->
+            <label for="idOs">Système d’exploitation :</label>
+            <select id="idOs">
+                <option value="Windows 11">Windows 11</option>
+                <option value="Ubuntu Linux">Ubuntu Linux</option>
+                <option value="Sans OS">Sans OS</option></select
+            ><br /><br />
+
+            <button id="idActionBuild">Construire le PC</button>
+        </fieldset>
+
+        <pre id="output"></pre>
+    </body>
+</html>
