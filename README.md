@@ -17,7 +17,7 @@ Le reste du code (classe `PC`, programme principal, tests, etc.) est déjà four
 L’objectif est de permettre la création d’un objet `PC` via une approche fluide du type :
 
 ```js
-const myPC = new PCBuilder().setCPU('Intel i7').setGPU('RTX 4070').setRAM(32).setStorage('1TB SSD').setOS('Ubuntu 24.04').build();
+const myPC = new PCBuilder().setCPU('Intel i7').setGPU('RTX 4070').setRAM(32).setSSD('512').setHDD(2000).setOS('Ubuntu 24.04').build();
 ```
 
 <img src="res/EMF_logo_RVB_Info_long.png" width="25%" style="margin-left:-20px;">
